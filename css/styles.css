@@ -616,6 +616,7 @@ color: #FFFFFF;
   position: relative;
   width: 200px;
   height: 50px;
+  margin-left: 12px;
   font-weight: 700;
   font-size: 16px;
   line-height: 30px;
@@ -816,10 +817,10 @@ color: #FFFFFF;
 .title-modal {
   font-weight: 700;
   font-size: 20px;
-  line-height: 23px;
+  line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
   color: #212121;
   
 }
@@ -891,13 +892,16 @@ color: #FFFFFF;
   max-width: 448px;
   height: 120px;
   padding: 12px;
-  margin-left: 0;
   margin-bottom: 20px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none; 
 }
 
-
+.form-textarea:focus{
+ border-color: #2196f3;
+}
 
 /*chekbox*/
 
@@ -907,6 +911,7 @@ color: #FFFFFF;
 
 .checkbox-label {
   position: relative;
+  display: block;
   padding-left: 28px;
   margin-bottom: 30px;
   font-weight: 400;
@@ -921,7 +926,7 @@ color: #757575;
 
 .checkbox-label::before {
   position: absolute;
-  top: 0;
+  top: 4px;
   left: 0;
   width: 16px;
   height: 15px;
@@ -932,12 +937,13 @@ color: #757575;
 
 .checkbox-label::after {
   position: absolute;
-  top: 0;
+  top: 4px;
   left: 0;
   width: 16px;
   height: 15px;
   border: 1px solid #212121;
   border-radius: 2px;
+  background-position: center;
   background-image: url(../images/SVG/Vector.svg#icon-Vector-2);
   background-repeat: no-repeat;
   background-color: #2196f3;
@@ -951,6 +957,12 @@ color: #757575;
   transition: opacity 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.checkbox-label-conditions{
+  color: #2196F3;
+  text-decoration: underline;
+}
+
 
 .modal-button {
   display: block; 
